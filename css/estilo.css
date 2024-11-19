@@ -1,0 +1,302 @@
+/*
+Sempre que for fazer um css inicie com *{
+    box-sizing: border-box;
+}
+bady{
+    margin: 0;
+}
+*/
+/*
+Dicas boas praticas utilizar a propriedade css border:1xp solid red; a cor pode ir modificando para que possamos ver a area do componente
+*/
+/*
+quando o código não estiver respondendo de forma adequada utilize o alt+shift+f para organizar e o ctrl+s para salvar se mesmo assim continuar fecha o VS e abre novamente se mesmo assim não fincionar revise seu codigo.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Menu*/
+* {
+    box-sizing: border-box;
+}
+
+bady {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    /*quando estiver fazendo, deixe o fundo do componente pai com uma cor visivel para ajusta no desenvolvimento no final coloque a cor real ou retire a cor ou altere do background pode fazer com bordas tambem ex: border: 1px solid red; */
+    background: white;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.logo h1 {
+    font-family: "Lobster", cursive;
+    color: #180F4A;
+    font-size: 22px;
+}
+
+.logo {
+    flex: 15%;
+    margin-left: 10%;
+    /* border: 1px solid red; foi utilizado para ajudar na marcação*/
+    text-align: left;
+}
+
+.menu {
+    flex: 60%;
+    /* border: 1px solid green; utilizado para ajudar na marcação*/
+    text-align: right;
+    padding: 20px;
+}
+
+.menu a {
+    color: #180F4A;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.menu a:hover {
+    color: #FF2978;
+    border-top: 4px solid #FF2978;
+}
+
+#botao {
+    background: #180F4A;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+/*QUANDO FOR USAR A CLASS SÓ DER ESPAÇO APOS CONCLUIR O NOME DA CLASS EX: 
+h1{
+} 
+.nome_da_class{
+}
+#nome_do_id:hover{
+}
+porem se for utilizar uma class composta com tag simples precisa dar um espaço do nome da class para o nome da tag simples
+ex:
+.nome_da_class a:hover{
+}
+ */
+#botao:hover {
+    border: none;
+    background: #FF2978;
+}
+
+/*topo header*/
+.header {
+    /*Quando começar a criar um componente/container utilize o "display flex o flex-flow: row wrao um height 600px bacground gray" para visualizar melhor a area que vai trabalhar*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding-top: 100px;
+
+}
+
+.headline {
+    margin-left: 10%;
+    flex: 40%;
+    /* border: 1px solid black; */
+}
+
+.headline h2 {
+    font-weight: 900;
+    font-size: 20px;
+    color: #180F4A;
+    padding: 0;
+    margin: 0;
+}
+
+.headline p {
+    color: gray;
+    text-align: left;
+}
+
+.img-haadline {
+    margin-right: 10%;
+    flex: 40%;
+    /* border: 1px solid #FF2978; utilizado para ajudar na marcação*/
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contact-btn {
+    display: flex;
+    background: #FF2978;
+    padding: 20px;
+    width: 35%;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background: #180F4A;
+}
+
+
+
+/* Fim do header top/*
+/*Inicio da primeira section */
+section {
+    display: inline-block;
+    margin-top: 80px;
+    /* border: 1px solid black; para ajudar na marcação*/
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5%;
+    text-align: center;
+}
+
+section h2 {
+    width: 100%;
+    font-size: 50px;
+    margin: 0;
+    font-family: "Lobster", cursive;
+    font-weight: bold;
+    color: #180F4A;
+}
+
+.servicos {
+    display: inline-block;
+    margin-top: 5%;
+}
+
+.card {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    margin: 1%;
+    border: 1px solid #FF2978;
+    border-radius: 10px;
+    /* Cursor virar mãozinha cursor: pointer*/
+    cursor: pointer;
+}
+
+.card-oculto {
+    display: none;
+}
+
+.card:hover {
+    background: #FF2978;
+    color: white;
+    padding: 40px;
+}
+
+.card:hover img {
+    display: none;
+}
+
+.card:hover .card-text {
+    display: none;
+}
+
+.card:hover .card-oculto {
+    display: block;
+}
+/* inicio section dentro de section */
+/* section dentro de section inicio */  
+.header-final {
+    /*Quando começar a criar um componente/container utilize o "display flex o flex-flow: row wrao um height 600px bacground gray" para visualizar melhor a area que vai trabalhar*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: white;
+    padding-top: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.headline-final {
+    margin-left: 5%;
+    flex: 20%;
+    /* border: 1px solid black; */
+}
+
+.headline-final h2 {
+
+    font-weight: 10;
+    font-size: 12px;
+    color: #180F4A;
+    padding: 0%;
+    margin: 0;
+    margin-top: 8%;
+    font-family: "Lobster", cursive;
+}
+
+.headline-final p {
+    color: gray;
+    text-align: left;
+}
+
+.contact-btn {
+    display: flex;
+    background: #FF2978;
+    padding: 20px;
+    width: 54%;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 20%;
+}
+
+.contact-btn:hover {
+    background: #180F4A;
+}
+
+.img-haadline-final {
+    margin-right: 10%;
+    flex: 40%;
+    /* border: 1px solid #FF2978; utilizado para ajudar na marcação*/
+    text-align: center;
+    text-transform: uppercase;
+}
+/* fim da section */
+/* inicio do footer ou roda pé */
+footer {
+    margin-top: 100px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(180deg, #180F4A, #090422, black);
+    text-align: center;
+    border-top: 5px solid #FF2978;
+}
+
+.rodape {
+    padding: 100px;
+}
+
+.rodape-text-h1 {
+    font-family: "Lobster", cursive;
+    color: white;
+    font-size: 34px;
+}
+
+/* Fim do footer */
+/* inico botão whats*/
+.whats {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 70px;
+}
+
+/* Fim botão Whats*/

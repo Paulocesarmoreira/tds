@@ -1,0 +1,279 @@
+.navbar {
+    display: flex;
+    /* Alterado para flex para facilitar o layout */
+    flex-flow: row wrap;
+    height: 100px;
+    /* Reduzido para um tamanho mais compacto */
+    background: white;
+    justify-content: space-between;
+    /* Distribui os elementos corretamente */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    /* Para fixar no topo */
+    width: 100%;
+    z-index: 1000;
+    /* Garante que fique sobre outros elementos */
+    padding: 0 20px;
+    /* Adiciona espaçamento interno */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra suave */
+}
+
+.logo h1 {
+    font-family: "Lobster", cursive;
+    color: #180F4A;
+    font-size: 22px;
+    margin: 0;
+    /* Remove margem padrão */
+}
+
+.logo {
+    flex: 1;
+    text-align: left;
+}
+
+.menu {
+    display: flex;
+    /* Ajustado para flex */
+    flex: 2;
+    /* Aloca mais espaço para o menu */
+    justify-content: flex-end;
+    gap: 20px;
+    /* Espaçamento entre os itens */
+}
+
+.menu a {
+    color: #180F4A;
+    text-decoration: none;
+    font-size: 18px;
+    /* Reduzido para maior compatibilidade em telas menores */
+    padding: 10px;
+    transition: color 0.3s, border-top 0.3s;
+}
+
+.menu a:hover {
+    color: #FF2978;
+    border-top: 4px solid #FF2978;
+}
+
+#botao {
+    background: #180F4A;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    /* Ajustado para espaçamento natural */
+    cursor: pointer;
+    /* Indica que é clicável */
+}
+
+#botao:hover {
+    background: #FF2978;
+    /* Adiciona um efeito hover */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: inline-block;
+        flex-flow: row wrap;
+        flex-direction: column;
+        /* Empilha os elementos verticalmente */
+        align-items: center;
+        height: auto;
+        /* Ajusta automaticamente conforme o conteúdo */
+        padding: 0;
+        /* Reduz o espaçamento interno */
+        margin: 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        /* Itens do menu em coluna */
+        align-items: center;
+        /* Centraliza os links */
+        gap: 2px;
+        /* Espaçamento menor entre os links */
+        padding: 0;
+        /* Reduz o espaçamento interno */
+        margin: 0;
+    }
+
+    .menu a {
+        font-size: 12px;
+        /* Reduz o tamanho do texto em telas menores */
+        padding: 0;
+        /* Reduz o espaçamento interno */
+        margin: 0;
+    }
+
+    #botao {
+        margin: 10px 0;
+        /* Espaçamento extra para separação */
+        width: 35%;
+        /* O botão ocupa toda a largura */
+        text-align: center;
+        /* Centraliza o texto */
+        padding: 0;
+        /* Reduz o espaçamento interno */
+        margin: 0;
+    }
+
+    #botao:hover {
+        border: none;
+        background: #FF2978;
+    }
+
+    .header {
+        /*Quando começar a criar um componente/container utilize o "display flex o flex-flow: row wrao um height 600px bacground gray" para visualizar melhor a area que vai trabalhar*/
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        padding-top: 100px;
+    }
+
+    .headline {
+        margin-left: 5%;
+        flex: 20%;
+        /* border: 1px solid black; */
+    }
+
+    .headline h2 {
+
+        font-weight: 10;
+        font-size: 12px;
+        color: #180F4A;
+        padding: 0%;
+        margin: 0;
+        margin-top: 8%;
+        font-family: "Lobster", cursive;
+    }
+
+    .headline p {
+        color: gray;
+        text-align: left;
+    }
+
+    .contact-btn {
+        display: flex;
+        background: #FF2978;
+        padding: 20px;
+        width: 54%;
+        color: white;
+        text-transform: uppercase;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-left: 20%;
+    }
+
+    .contact-btn:hover {
+        background: #180F4A;
+    }
+
+    .img-haadline {
+        margin-right: 10%;
+        flex: 40%;
+        /* border: 1px solid #FF2978; utilizado para ajudar na marcação*/
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    /* Fim do header top/*
+    /*Inicio da primeira section */
+    section {
+        display: inline-block;
+        margin-top: 80px;
+        /* border: 1px solid black; para ajudar na marcação*/
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 5%;
+        text-align: center;
+    }
+
+    section h2 {
+        width: 100%;
+        font-size: 50px;
+        margin: 0;
+        font-family: "Lobster", cursive;
+        font-weight: bold;
+        color: #180F4A;
+    }
+
+    .servicos {
+        display: inline;
+        margin-top: 5%;
+        align-items: center;
+    }
+
+    .card {
+        display: grid;
+        width: 100%;
+        /* padding: 5px; */
+        /* margin: 1%; */
+        /* border: 1px solid #FF2978; */
+        /* border-radius: 10px; */
+        /* Cursor virar mãozinha cursor: pointer*/
+        /* cursor: pointer; */
+    }
+    .card-oculto {
+        display: inline;
+    }
+
+    .card:hover {
+        display: none;
+    }
+
+    .card-oculto:hover {
+        display: none;
+    }
+    .card:hover img {
+        display: none;
+    }
+    /* .card:hover {
+        background: #FF2978;
+        color: white;
+        padding: 40px;
+    } */
+    /* .card:hover .card-text {
+        display: none;
+    } */
+
+    /* .card:hover .card-oculto {
+        display: block;
+    } */
+
+    /* fim da section */
+    /* inicio do footer ou roda pé */
+    footer {
+        margin-top: 100px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(180deg, #180F4A, #090422, black);
+        text-align: center;
+        border-top: 5px solid #FF2978;
+    }
+
+    .rodape {
+        padding: 100px;
+    }
+
+    .rodape-text-h1 {
+        font-family: "Lobster", cursive;
+        color: white;
+        font-size: 34px;
+    }
+
+    /* Fim do footer */
+    /* inico botão whats*/
+    .whats {
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        width: 70px;
+    }
+
+    /* Fim botão Whats*/
+}
